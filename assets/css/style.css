@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+:root{
+	--font-primary: 'Lato';
+	--font-secondary: 'Montserrat';
+	--text-primary: #FFF;
+	--text-secondary: #000;
+	--background-primary: #FFF;
+	--background-secondary: #000;
+	font-size: 62.5%; /* 10/16  */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-default);
+}
+
+.loader{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.spin{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 10px solid silver;
+	border-top: 10px solid #6a3093;
+	animation: spin 2.5s linear infinite;
+}
+
+.hiden{
+	display: none;
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+#hamburguer{
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+#hamburguer .linha{
+    height: .5rem;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 .2rem .2rem #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #FFF;
+    height: 100vh;
+    width: 20rem;
+    z-index: 10;
+    right: -20rem;
+    transition: right 1s;
+	top: 0;
+}
+
+.menu-show{
+    right: 0;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #000;
+}
+
+nav a:hover{
+    color: #6a3093;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2.5rem;
+}
+
+span {
+    font-size: 4rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	background-image: url("/assets/images/background_home.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 100vh;
+	padding-top: 12.5rem;
+	padding-left: 7rem;
+	color: #FFF;
+	
+}
+
+
+@keyframes zoom {
+	0%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: 900;
+	color: #FFF;
+	font-family: 'Poppins';
+	background: linear-gradient(90deg, #2b5876 100%, #4e4376 100%);
+	animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.botao:hover{
+	opacity: .8;
+}
+
+@keyframes focus-in-contract {
+	0% {
+	  letter-spacing: 1em;
+	  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+  
+
+span {
+	font-size: 40px;
+	font-family: 'Montserrat';
+	color: #FFF;
+	background: linear-gradient(90deg, #2b5876 100%, #4e4376 100%);
+	animation: text-flicker-in-glow 4s linear both;
+}
+
+@keyframes text-flicker-in-glow {
+	0% {
+	  opacity: 0;
+	}
+	15% {
+	  opacity: 1;
+	  text-shadow: none;
+	}
+	30% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	45% {
+	  opacity: 1;
+	  text-shadow: none;
+	}
+	50% {
+	  opacity: 1;
+	  text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+	}
+
+	75% {
+	  opacity: 1;
+	  text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+	}
+
+	100% {
+	  opacity: 1;
+	  text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+	}
+  }
+  
+
+
+
+
+section {
+	display: flex;
+	gap: 2rem;
+	padding: 7rem;
+}
+
+div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#secao-acoes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("/assets/images/ações-bolsa.jpg");
+	height: 100vh;
+}
+
+#secao-acoes ul{
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	color: var(--text-primary);
+}
+
+#secao-acoes li{
+	list-style: none;
+}
+
+.card{
+	width: 25rem;
+	height: 30rem;
+	position: relative;
+	cursor: pointer;
+}
+
+.card-img-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	border-radius: 10px;
+}
+
+.card-img-wrapper img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	opacity: .8;
+	transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{
+	opacity: .5;
+}
+
+.card-text{
+	position: absolute;
+	bottom: -2rem;
+	opacity: 0;
+	padding: 2rem;
+	text-shadow: .3rem .2rem .3rem rgba(0, 0, 0, .6)
+}
+
+.card:hover .card-text{
+	opacity: 1;
+	bottom: 0;
+}
+
+#secao-conversordemoedas{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	gap: 1rem;
+	height: 650px;
+	top: -10px;
+	border-radius: 25px 25px 0 0;
+	background-image: url("/assets/images/rupixen-com-nI--XptpMa8-unsplash.jpg");
+
+}
+
+#secao-conversordemoedas form h3{
+	background-color: #4e4376;
+	color: #FFF;
+	position: absolute;
+	top: -10%;
+	left: 5%;
+	padding: 1rem 3rem;
+	border-radius: 10px;
+}
+
+#secao-conversordemoedas form{
+    display: grid;
+    row-gap: 1.5rem;
+    font-size: 2.5rem;
+	column-gap: .5rem;
+    justify-items: start;
+    grid-template-columns: 1.10fr 1fr;
+    background-color: #0009; 
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 4rem;
+}
+
+input[type=text], select{
+    font-size: 2rem;
+    outline: none;
+    padding: 1rem;
+    border-radius: 7px;
+    border: 0;
+}
+
+@media (width <= 830px) {
+	#secao-acoes ul {
+		flex-direction: column;
+	}
+	#secao-conversordemoedas form{
+		display: flex;
+		flex-direction: column;
+	}
+}
