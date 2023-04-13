@@ -125,7 +125,7 @@ header {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 1rem;
-	background-image: url("./assets/images/background_home.jpg");
+	background-image: url("../images/background_home.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -233,7 +233,7 @@ div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url("./assets/images/ações-bolsa.jpg");
+	background-image: url("../images/ações-bolsa.jpg");
 	height: 100vh;
 }
 
@@ -296,7 +296,7 @@ div{
 	height: 650px;
 	top: -10px;
 	border-radius: 25px 25px 0 0;
-	background-image: url("./assets/images/rupixen-com-nI--XptpMa8-unsplash.jpg");
+	background-image: url("../images/rupixen-com-nI--XptpMa8-unsplash.jpg");
 
 }
 
